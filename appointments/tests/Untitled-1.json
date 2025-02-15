@@ -1,0 +1,29 @@
+// for creating users
+{
+    "username":"chirag321",
+    "phone": "8368795328",
+    "email": "chirag@example.com"
+
+}
+// for creating patients
+{
+    "username": "chirag1",
+    "phone": "123123"
+}   
+// for creating doctors
+{
+    "doctor_username":"chirag321",
+    "doctor_specialization": "cardiologist",
+    "available_from": "07:30:00",
+    "available_to": "10:30:00"
+
+}
+{
+    "patient_username": "chirag2201",
+    "doctor_username": "chirag2201",
+    "doctor_specialization": "Neurologist",
+    "appointment_date": "2025-02-15",
+    "appointment_time": "10:30:25",
+    "appointment_status": "Confirmed"
+
+}
