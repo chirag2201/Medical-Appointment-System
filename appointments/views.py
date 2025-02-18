@@ -124,8 +124,9 @@ class AppointmentListCreateAPIView(APIView):
         appointment_time = data.get("appointment_time")
         appointment_status = data.get("appointment_status")
         print(patient_username,doctor_username,doctor_specialization,appointment_date,appointment_time,appointment_status)
+        
         appointments = self.queryset.values(
-            "id", "patient__username", "doctor__username", "doctor__specialization", "date", "time", "status"
+            "id", "patient_user__username", "doctor_user__username", "doctor_user__specialization", "date", "time", "status"
         )
         return Response(list(appointments), status=status.HTTP_200_OK)
 
