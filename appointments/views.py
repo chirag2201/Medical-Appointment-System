@@ -36,10 +36,8 @@ class UserListAPIView(APIView):
         data = request.data
         user_name = data.get("username")
         user_email = data.get("email")
-        print("______username and email_______",user_name,user_email)
         
         if not user_name or not user_email:
-            print("________________!_______")
             return Response({'message':'Username and Email ID is required to delete a user!'}, status=status.HTTP_400_BAD_REQUEST)
 
         if user_name:
@@ -48,7 +46,6 @@ class UserListAPIView(APIView):
             user = GenericUser.objects.filter(email=user_email).first()
         
         if not user:
-            print("_____________2_________")
             return Response({'message':'User not found!'}, status=status.HTTP_400_BAD_REQUEST)
         
         user.delete()
